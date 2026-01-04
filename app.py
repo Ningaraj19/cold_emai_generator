@@ -7,7 +7,7 @@ from utils import clean_text
 
 def create_streamlit_app(llm, portfolio, clean_text):
     st.title("📧 Cold Mail Generator")
-    url_input = st.text_input("Enter a URL:", value="https://jobs.nike.com/job/R-33460")
+    url_input = st.text_input("Enter a URL:", value="Provide Job Career Link")
     submit_button = st.button("Submit")
 
     if submit_button:
@@ -29,4 +29,5 @@ if __name__ == "__main__":
     chain = Chain()
     portfolio = Portfolio()
     st.set_page_config(layout="wide", page_title="Cold Email Generator", page_icon="📧")
+
     create_streamlit_app(chain, portfolio, clean_text)
